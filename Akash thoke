@@ -1,0 +1,214 @@
+- 👋 Hi, I’m @AKASH526Thoke
+- 👀 I’m interested in ...
+- 🌱 I’m currently learning ...
+- 💞️ I’m looking to collaborate on ...
+- 📫 How to reach me ...
+
+<!---
+AKASH526Thoke/AKASH526Thoke is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
+[09/04, 9:54 AM] [😎~$KY😎]: Add Button
+if (chkwashbike.Checked)
+ {
+   name = "Wash bike";
+   price = 1000;
+
+  this.dataGridView1.Rows.Add(name, price);
+ }
+if (chkbrakes.Checked)
+  {
+   name = "Adjust brakes";
+   price = 2000;
+   this.dataGridView1.Rows.Add(name, price);
+ }
+if (chkheadset.Checked)
+ {
+  name = "Adjust headset";
+  price = 1500;
+
+  this.dataGridView1.Rows.Add(name, price);
+ }           
+ if (chkmoving.Checked)
+ {
+  name = "Adjust moving";
+  price = 1800;
+  this.dataGridView1.Rows.Add(name, price);
+ }
+ if (chkwheels.Checked)
+ {
+  name = "Align wheels";
+  price = 2500;
+  this.dataGridView1.Rows.Add(name, price);
+ }
+ int sum = 0;
+
+ for (int row = 0; row < dataGridView1.Rows.Count; row++)
+   {
+     sum = sum + Convert.ToInt32(dataGridView1.Rows[row].Cells[1].Value);
+   } 
+   txtSub.Text = sum.ToString();
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+if (chkwashbike.Checked)
+{
+   name = "Wash bike";
+   price = 1000;
+ 
+  this.dataGridView1.Rows.Add(name, price);
+}
+if (chkbrakes.Checked)
+  {
+   name = "Adjust brakes";
+   price = 2000;
+   this.dataGridView1.Rows.Add(name, price);
+}
+if (chkheadset.Checked)
+{
+  name = "Adjust headset";
+  price = 1500;
+ 
+  this.dataGridView1.Rows.Add(name, price);
+}          
+if (chkmoving.Checked)
+{
+  name = "Adjust moving";
+  price = 1800;
+  this.dataGridView1.Rows.Add(name, price);
+}
+if (chkwheels.Checked)
+{
+  name = "Align wheels";
+  price = 2500;
+  this.dataGridView1.Rows.Add(name, price);
+}
+int sum = 0;
+ 
+for (int row = 0; row < dataGridView1.Rows.Count; row++)
+   {
+     sum = sum + Convert.ToInt32(dataGridView1.Rows[row].Cells[1].Value);
+   }
+   txtSub.Text = sum.ToString();
+[09/04, 9:57 AM] [😎~$KY😎]: Delete Button
+ private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["Delete"].Index && e.RowIndex >= 0)
+            {
+                dataGridView1.Rows.Remove(dataGridView1.Rows[e.RowIndex]);
+
+                int sum = 0;
+                for (int row = 0; row < dataGridView1.Rows.Count; row++)
+                {
+                    sum = sum + Convert.ToInt32(dataGridView1.Rows[row].Cells[1].Value);
+                }
+                txtSub.Text = sum.ToString();
+            }
+
+        }
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["Delete"].Index && e.RowIndex >= 0)
+            {
+                dataGridView1.Rows.Remove(dataGridView1.Rows[e.RowIndex]);
+ 
+                int sum = 0;
+                for (int row = 0; row < dataGridView1.Rows.Count; row++)
+                {
+                    sum = sum + Convert.ToInt32(dataGridView1.Rows[row].Cells[1].Value);
+                }
+                txtSub.Text = sum.ToString();
+            }
+ 
+        }
+[09/04, 9:59 AM] [😎~$KY😎]: Balance Displayed Paste code inside the Amount Textbox
+ private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            int sub, pay, bal;
+
+            sub = int.Parse(txtSub.Text);
+            pay = int.Parse(textBox1.Text);
+
+
+            int tot = pay - sub;
+
+            txtBal.Text = tot.ToString();
+
+        }
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            int sub, pay, bal;
+ 
+            sub = int.Parse(txtSub.Text);
+            pay = int.Parse(textBox1.Text);
+ 
+ 
+            int tot = pay - sub;
+ 
+            txtBal.Text = tot.ToString();
+ 
+        }
